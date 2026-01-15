@@ -12,6 +12,11 @@ public class SensorReadings {
         // Use a for loop with a step size of 5 to iterate over the minute marks.
         // At each minute, compute a value equal to (minute / 5) * 2,
         // then print the minute and the computed value.
+    for(int minute = 0; minute <= 60; minute += 5) {
+            double value = (minute / 5) * 2;
+            System.out.println("minute : " + minute + "value" + value);
+        }
+            
 
     }
     
