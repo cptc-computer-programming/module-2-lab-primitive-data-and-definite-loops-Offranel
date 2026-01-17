@@ -16,9 +16,13 @@ public class PatternSection {
     // Format: + followed by repeating "=*" and ending with +
     // Example for SIZE=2: +=*=*=*=*+
     public static void printEdge() {
-
+            System.out.print("+");
+        for (int i = 0; i < SIZE * 2; i++) {
+            System.out.print("=*");
+        }
+        System.out.println("+");
     }
-
+    
     // TODO: Print the top half of the “double-diamond” section.
     // Requirements:
     // - total rows: SIZE * 2
@@ -27,7 +31,32 @@ public class PatternSection {
     // - use SIZE in all loop bounds (no magic numbers except 0/1)
     public static void printDiamondTop() {
 
+    
+        for (int row = 0; row < SIZE * 2; row++) {
+
+            System.out.print("|");
+
+            for (int i = 0; i < (SIZE * 2 - 1) - row; i++) {
+                System.out.print(".");
+            }
+
+            for (int i = 0; i < row + 1; i++) {
+                System.out.print("/\\");
+            }
+
+            for (int i = 0; i < (SIZE * 2 - 1) - row; i++) {
+                System.out.print(".");
+            }
+
+            System.out.println("|");
+        }
     }
+
+    
+        
+
+
+      
 
     // TODO: Print the bottom half (mirror/inverse of the top half).
     // Requirements:
@@ -37,6 +66,25 @@ public class PatternSection {
     // - use SIZE in all loop bounds
     public static void printDiamondBottom() {
 
+        
+        for (int row = SIZE * 2 - 1; row >= 0; row--) {
+
+            System.out.print("|");
+
+            for (int i = 0; i < (SIZE * 2 - 1) - row; i++) {
+                System.out.print(".");
+            }
+
+            for (int i = 0; i < row + 1; i++) {
+            }
+                System.out.print(".");
+
+            System.out.println("|");
+        }
     }
-    
 }
+
+    
+
+
+
